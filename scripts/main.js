@@ -1,18 +1,14 @@
-// Animación de fade-in
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.fade-in');
-    const triggerBottom = window.innerHeight / 5 * 4;
+// ✨ Animación al hacer scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-in");
 
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if(sectionTop < triggerBottom){
-            section.classList.add('visible');
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
-});
+  });
 
-// Formulario seguro (simulación)
-document.getElementById('contact-form').addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Mensaje enviado (simulación segura)');
+  fadeElements.forEach(el => observer.observe(el));
 });
