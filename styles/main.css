@@ -1,68 +1,19 @@
-/* Reset básico */
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f2f5;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem 0;
+/* Botón de "Ver más productos" */
+.boton-centro {
     text-align: center;
+    margin-top: 20px;
 }
 
-header .logo { font-size:2rem; font-weight:bold; }
-
-nav ul.menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 0.5rem;
+.btn {
+    background-color: #d35400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-nav a { color:white; text-decoration:none; font-weight:bold; }
-
-main { padding:2rem; }
-
-/* Secciones */
-section {
-    margin-bottom:2rem;
-    background:white;
-    padding:1.5rem;
-    border-radius:10px;
-    box-shadow:0 0 15px rgba(0,0,0,0.1);
-    opacity:0;
-    transform: translateY(20px);
-    transition: all 0.8s ease;
-}
-
-/* Animación */
-section.visible { opacity:1; transform: translateY(0); }
-
-/* Formulario */
-form input, form textarea {
-    width:100%; padding:0.5rem; margin:0.5rem 0; border-radius:5px; border:1px solid #ccc;
-}
-
-form button {
-    padding:0.5rem 1rem; background-color:#4CAF50; color:white; border:none; cursor:pointer; border-radius:5px;
-}
-
-form button:hover { background-color:#45a049; }
-
-/* Mensaje de formulario */
-#form-msg { margin-top: 0.5rem; font-weight:bold; }
-
-/* Footer */
-footer { text-align:center; padding:1rem 0; background-color:#222; color:white; }
-
-/* Responsivo */
-@media (max-width:600px){
-    nav ul.menu { flex-direction: column; gap:1rem; }
+.btn:hover {
+    background-color: #e67e22;
 }
