@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tita - Ollas de Calidad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: #fff8f0; color: #333; line-height: 1.6; }
+    header { background-color: #ff5722; color: #fff; padding: 20px; text-align: center; }
+    header h1 { font-size: 2.5rem; }
+    nav { margin-top: 10px; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+
+    .hero { text-align: center; padding: 50px 20px; background: url('imagenes/hero-ollas.jpg') no-repeat center/cover; color: #fff; }
+    .hero h2 { font-size: 2rem; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5);}
+    .hero button { padding: 10px 20px; background-color: #e64a19; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; color: #fff; transition: background 0.3s; }
+    .hero button:hover { background-color: #d84315; }
+
+    .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 40px 20px; }
+    .producto { background-color: #fff; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .producto:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .producto img { width: 100%; border-radius: 10px; }
+    .producto h3 { margin: 10px 0; font-size: 1.2rem; color: #ff5722; }
+    .producto p { font-size: 0.95rem; margin-bottom: 10px; }
+    .precio { font-weight: 600; font-size: 1.1rem; color: #e64a19; }
+    .boton { background-color: #ff5722; color: #fff; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+    .boton:hover { background-color: #e64a19; }
+
+    .testimonios { background-color: #fff3e0; padding: 50px 20px; text-align: center; }
+    .testimonios h2 { margin-bottom: 30px; color: #ff5722; }
+    .testimonial { margin-bottom: 20px; font-style: italic; }
+
+    footer { background-color: #333; color: #fff; text-align: center; padding: 20px; }
+    footer a { color: #ff5722; margin: 0 5px; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media(max-width:600px){ .hero h2{font-size:1.5rem;} }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tita Ollas</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Bienvenido a Tita – Ollas de calidad para tu cocina</h2>
+    <button onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'});">Ver productos</button>
+  </section>
+
+  <section id="productos" class="productos">
+    <div class="producto">
+      <img src="imagenes/olla1.jpg" alt="Olla Tita 24cm">
+      <h3>Olla Tita 24cm</h3>
+      <p>Acero inoxidable de alta calidad, ideal para todo tipo de cocina.</p>
+      <p class="precio">$12.500</p>
+      <button class="boton">Comprar</button>
+    </div>
+    <div class="producto">
+      <img src="imagenes/olla2.jpg" alt="Olla Tita 20cm">
+      <h3>Olla Tita 20cm</h3>
+      <p>Perfecta para guisos y sopas, resistente y duradera.</p>
+      <p class="precio">$10.000</p>
+      <button class="boton">Comprar</button>
+    </div>
+    <div class="producto">
+      <img src="imagenes/olla3.jpg" alt="Cacerola Tita 28cm">
+      <h3>Cacerola Tita 28cm</h3>
+      <p>Gran capacidad para comidas familiares, antiadherente y fácil de limpiar.</p>
+      <p class="precio">$14.500</p>
+      <button class="boton">Comprar</button>
+    </div>
+    <!-- Agregar más productos aquí -->
+  </section>
+
+  <section id="testimonios" class="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <p class="testimonial">“Las ollas de Tita son increíbles, nunca se pegan y duran años.” – Mariana R.</p>
+    <p class="testimonial">“Excelente calidad y envío rápido. Muy recomendable.” – José P.</p>
+    <p class="testimonial">“Me encantó la variedad de tamaños. Perfectas para mi cocina.” – Lucía M.</p>
+  </section>
+
+  <footer id="contacto">
+    <p>Contacto: <a href="mailto:tita@correo.com">tita@correo.com</a> | WhatsApp: <a href="https://wa.me/5491123456789">11 2345 6789</a></p>
+    <p>Síguenos en: 
+      <a href="#">TikTok</a> | 
+      <a href="#">Instagram</a>
+    </p>
+    <p>&copy; 2025 Tita Ollas. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
