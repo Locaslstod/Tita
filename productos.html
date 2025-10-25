@@ -1,100 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo de Ollas | Virginia</title>
-  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family:'Roboto',sans-serif; margin:0; padding:0; background:#f9f9f9; }
+    header { background:#0275d8; color:white; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    .logo { font-size:1.8rem; margin:0; }
+    nav ul { list-style:none; display:flex; gap:15px; margin:0; padding:0; }
+    nav a { color:white; text-decoration:none; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+    .banner { background:#333 url('imgs/banner.jpg') center/cover no-repeat; color:white; text-align:center; padding:80px 20px; }
+    .banner h2 { font-size:2rem; margin-bottom:10px; }
+    .banner p { font-size:1.1rem; }
+    main { padding:40px 20px; max-width:1200px; margin:auto; }
+    h2 { text-align:center; margin-bottom:30px; font-size:2rem; color:#333; }
+    .galeria { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; }
+    .producto { background:white; border-radius:10px; overflow:hidden; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .producto:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+    .producto img { width:100%; height:200px; object-fit:cover; }
+    .producto h3 { margin:10px 0 5px 0; color:#0275d8; font-size:1.2rem; }
+    .precio { color:#d9534f; font-weight:bold; margin-bottom:5px; }
+    .descripcion { font-size:0.9rem; color:#555; padding:0 10px 10px 10px; }
+    .btn-carrito { background:#0275d8; color:white; border:none; padding:10px 20px; margin-bottom:15px; border-radius:5px; cursor:pointer; transition:0.2s; }
+    .btn-carrito:hover { background:#025aa5; }
+    footer { text-align:center; padding:20px; background:#333; color:white; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 class="logo">Virginia</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html#inicio">Inicio</a></li>
-        <li><a href="index.html#sobre-mi">Sobre Nosotros</a></li>
-        <li><a href="index.html#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- 🏷️ Banner principal -->
-  <section class="banner">
-    <div class="banner-texto">
-      <h2>Catálogo de Ollas Profesionales</h2>
-      <p>Fabricadas con aluminio reforzado, durabilidad y elegancia — calidad garantizada.</p>
-    </div>
-  </section>
+<header>
+  <h1 class="logo">Virginia</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#sobre-mi">Sobre Nosotros</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- 🧩 Catálogo -->
-  <main>
-    <section id="productos">
-      <h2>Nuestras Ollas</h2>
-      <div class="galeria">
+<section class="banner">
+  <h2>Catálogo de Ollas Profesionales</h2>
+  <p>Durabilidad, elegancia y calidad garantizada en cada producto.</p>
+</section>
 
-        <!-- 🫕 Lista de ollas del 1 al 55 -->
-        <div class="producto"><img src="imgs/imagen-000.png" alt="Olla 1"><h3>Olla 1</h3></div>
-        <div class="producto"><img src="imgs/imagen-001.png" alt="Olla 2"><h3>Olla 2</h3></div>
-        <div class="producto"><img src="imgs/imagen-002.png" alt="Olla 3"><h3>Olla 3</h3></div>
-        <div class="producto"><img src="imgs/imagen-003.png" alt="Olla 4"><h3>Olla 4</h3></div>
-        <div class="producto"><img src="imgs/imagen-004.png" alt="Olla 5"><h3>Olla 5</h3></div>
-        <div class="producto"><img src="imgs/imagen-005.png" alt="Olla 6"><h3>Olla 6</h3></div>
-        <div class="producto"><img src="imgs/imagen-006.png" alt="Olla 7"><h3>Olla 7</h3></div>
-        <div class="producto"><img src="imgs/imagen-007.png" alt="Olla 8"><h3>Olla 8</h3></div>
-        <div class="producto"><img src="imgs/imagen-008.png" alt="Olla 9"><h3>Olla 9</h3></div>
-        <div class="producto"><img src="imgs/imagen-009.png" alt="Olla 10"><h3>Olla 10</h3></div>
-        <div class="producto"><img src="imgs/imagen-010.png" alt="Olla 11"><h3>Olla 11</h3></div>
-        <div class="producto"><img src="imgs/imagen-011.png" alt="Olla 12"><h3>Olla 12</h3></div>
-        <div class="producto"><img src="imgs/imagen-012.png" alt="Olla 13"><h3>Olla 13</h3></div>
-        <div class="producto"><img src="imgs/imagen-013.png" alt="Olla 14"><h3>Olla 14</h3></div>
-        <div class="producto"><img src="imgs/imagen-014.png" alt="Olla 15"><h3>Olla 15</h3></div>
-        <div class="producto"><img src="imgs/imagen-015.png" alt="Olla 16"><h3>Olla 16</h3></div>
-        <div class="producto"><img src="imgs/imagen-016.png" alt="Olla 17"><h3>Olla 17</h3></div>
-        <div class="producto"><img src="imgs/imagen-017.png" alt="Olla 18"><h3>Olla 18</h3></div>
-        <div class="producto"><img src="imgs/imagen-018.png" alt="Olla 19"><h3>Olla 19</h3></div>
-        <div class="producto"><img src="imgs/imagen-019.png" alt="Olla 20"><h3>Olla 20</h3></div>
-        <div class="producto"><img src="imgs/imagen-020.png" alt="Olla 21"><h3>Olla 21</h3></div>
-        <div class="producto"><img src="imgs/imagen-021.png" alt="Olla 22"><h3>Olla 22</h3></div>
-        <div class="producto"><img src="imgs/imagen-022.png" alt="Olla 23"><h3>Olla 23</h3></div>
-        <div class="producto"><img src="imgs/imagen-023.png" alt="Olla 24"><h3>Olla 24</h3></div>
-        <div class="producto"><img src="imgs/imagen-024.png" alt="Olla 25"><h3>Olla 25</h3></div>
-        <div class="producto"><img src="imgs/imagen-025.png" alt="Olla 26"><h3>Olla 26</h3></div>
-        <div class="producto"><img src="imgs/imagen-026.png" alt="Olla 27"><h3>Olla 27</h3></div>
-        <div class="producto"><img src="imgs/imagen-027.png" alt="Olla 28"><h3>Olla 28</h3></div>
-        <div class="producto"><img src="imgs/imagen-028.png" alt="Olla 29"><h3>Olla 29</h3></div>
-        <div class="producto"><img src="imgs/imagen-029.png" alt="Olla 30"><h3>Olla 30</h3></div>
-        <div class="producto"><img src="imgs/imagen-030.png" alt="Olla 31"><h3>Olla 31</h3></div>
-        <div class="producto"><img src="imgs/imagen-031.png" alt="Olla 32"><h3>Olla 32</h3></div>
-        <div class="producto"><img src="imgs/imagen-032.png" alt="Olla 33"><h3>Olla 33</h3></div>
-        <div class="producto"><img src="imgs/imagen-033.png" alt="Olla 34"><h3>Olla 34</h3></div>
-        <div class="producto"><img src="imgs/imagen-034.png" alt="Olla 35"><h3>Olla 35</h3></div>
-        <div class="producto"><img src="imgs/imagen-035.png" alt="Olla 36"><h3>Olla 36</h3></div>
-        <div class="producto"><img src="imgs/imagen-036.png" alt="Olla 37"><h3>Olla 37</h3></div>
-        <div class="producto"><img src="imgs/imagen-037.png" alt="Olla 38"><h3>Olla 38</h3></div>
-        <div class="producto"><img src="imgs/imagen-038.png" alt="Olla 39"><h3>Olla 39</h3></div>
-        <div class="producto"><img src="imgs/imagen-039.png" alt="Olla 40"><h3>Olla 40</h3></div>
-        <div class="producto"><img src="imgs/imagen-040.png" alt="Olla 41"><h3>Olla 41</h3></div>
-        <div class="producto"><img src="imgs/imagen-041.png" alt="Olla 42"><h3>Olla 42</h3></div>
-        <div class="producto"><img src="imgs/imagen-042.png" alt="Olla 43"><h3>Olla 43</h3></div>
-        <div class="producto"><img src="imgs/imagen-043.png" alt="Olla 44"><h3>Olla 44</h3></div>
-        <div class="producto"><img src="imgs/imagen-044.png" alt="Olla 45"><h3>Olla 45</h3></div>
-        <div class="producto"><img src="imgs/imagen-045.png" alt="Olla 46"><h3>Olla 46</h3></div>
-        <div class="producto"><img src="imgs/imagen-046.png" alt="Olla 47"><h3>Olla 47</h3></div>
-        <div class="producto"><img src="imgs/imagen-047.png" alt="Olla 48"><h3>Olla 48</h3></div>
-        <div class="producto"><img src="imgs/imagen-048.png" alt="Olla 49"><h3>Olla 49</h3></div>
-        <div class="producto"><img src="imgs/imagen-049.png" alt="Olla 50"><h3>Olla 50</h3></div>
-        <div class="producto"><img src="imgs/imagen-050.png" alt="Olla 51"><h3>Olla 51</h3></div>
-        <div class="producto"><img src="imgs/imagen-051.png" alt="Olla 52"><h3>Olla 52</h3></div>
-        <div class="producto"><img src="imgs/imagen-052.png" alt="Olla 53"><h3>Olla 53</h3></div>
-        <div class="producto"><img src="imgs/imagen-053.png" alt="Olla 54"><h3>Olla 54</h3></div>
-        <div class="producto"><img src="imgs/imagen-054.png" alt="Olla 55"><h3>Olla 55</h3></div>
+<main>
+  <h2>Nuestras Ollas</h2>
+  <div class="galeria">
 
-      </div>
-    </section>
-  </main>
+    <!-- Bloques de productos del 1 al 55 -->
 
-  <footer>
-    <p>&copy; 2025 Virginia | Todos los derechos reservados.</p>
-  </footer>
-</body>
-</html>
+<!-- BLOQUES DE PRODUCTOS 1 A 25 --><div class="producto"><img src="imgs/imagen-000.png" alt="Olla 1"><h3>Olla 1</h3><p class="precio">$0</p><p class="descripcion">Olla profesional de aluminio reforzado, ideal para cocina diaria.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-001.png" alt="Olla 2"><h3>Olla 2</h3><p class="precio">$0</p><p class="descripcion">Olla resistente y elegante, perfecta para todo tipo de preparación.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-002.png" alt="Olla 3"><h3>Olla 3</h3><p class="precio">$0</p><p class="descripcion">Diseño moderno y duradero, excelente distribución del calor.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-003.png" alt="Olla 4"><h3>Olla 4</h3><p class="precio">$0</p><p class="descripcion">Ideal para cocinar con eficiencia y estilo, aluminio de alta calidad.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-004.png" alt="Olla 5"><h3>Olla 5</h3><p class="precio">$0</p><p class="descripcion">Capacidad amplia y diseño resistente, perfecta para recetas familiares.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-005.png" alt="Olla 6"><h3>Olla 6</h3><p class="precio">$0</p><p class="descripcion">Olla versátil y duradera, ideal para todo tipo de cocina.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-006.png" alt="Olla 7"><h3>Olla 7</h3><p class="precio">$0</p><p class="descripcion">Fabricada con materiales de alta resistencia, diseño elegante.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-007.png" alt="Olla 8"><h3>Olla 8</h3><p class="precio">$0</p><p class="descripcion">Perfecta para cocinas modernas, mantiene el calor de forma uniforme.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-008.png" alt="Olla 9"><h3>Olla 9</h3><p class="precio">$0</p><p class="descripcion">Olla de gran capacidad, duradera y elegante para todo tipo de recetas.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-009.png" alt="Olla 10"><h3>Olla 10</h3><p class="precio">$0</p><p class="descripcion">Ideal para uso diario, diseño robusto y acabado profesional.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-010.png" alt="Olla 11"><h3>Olla 11</h3><p class="precio">$0</p><p class="descripcion">Olla de aluminio reforzado, perfecta para todo tipo de cocción.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-011.png" alt="Olla 12"><h3>Olla 12</h3><p class="precio">$0</p><p class="descripcion">Elegante y resistente, ideal para cocina profesional o casera.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-012.png" alt="Olla 13"><h3>Olla 13</h3><p class="precio">$0</p><p class="descripcion">Diseño moderno, distribuye el calor de manera uniforme y eficiente.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-013.png" alt="Olla 14"><h3>Olla 14</h3><p class="precio">$0</p><p class="descripcion">Ideal para recetas grandes, resistente y duradera.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-014.png" alt="Olla 15"><h3>Olla 15</h3><p class="precio">$0</p><p class="descripcion">Capacidad amplia, perfecta para familias o eventos.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-015.png" alt="Olla 16"><h3>Olla 16</h3><p class="precio">$0</p><p class="descripcion">Versátil, duradera y fácil de limpiar, ideal para cocina diaria.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-016.png" alt="Olla 17"><h3>Olla 17</h3><p class="precio">$0</p><p class="descripcion">Acabado profesional, mantiene la temperatura constante durante la cocción.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-017.png" alt="Olla 18"><h3>Olla 18</h3><p class="precio">$0</p><p class="descripcion">Diseño resistente y elegante, perfecta para cocinas modernas.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-018.png" alt="Olla 19"><h3>Olla 19</h3><p class="precio">$0</p><p class="descripcion">Olla de gran capacidad, ideal para cocinar varias porciones a la vez.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-019.png" alt="Olla 20"><h3>Olla 20</h3><p class="precio">$0</p><p class="descripcion">Fabricada con materiales duraderos, resistente al uso diario.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-020.png" alt="Olla 21"><h3>Olla 21</h3><p class="precio">$0</p><p class="descripcion">Perfecta para recetas grandes, mantiene el calor de manera uniforme.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-021.png" alt="Olla 22"><h3>Olla 22</h3><p class="precio">$0</p><p class="descripcion">Ideal para cocina profesional y casera, resistente y elegante.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-022.png" alt="Olla 23"><h3>Olla 23</h3><p class="precio">$0</p><p class="descripcion">Distribución de calor uniforme, perfecta para todo tipo de platos.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-023.png" alt="Olla 24"><h3>Olla 24</h3><p class="precio">$0</p><p class="descripcion">Resistente y elegante, ideal para cocinar con estilo y eficiencia.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-024.png" alt="Olla 25"><h3>Olla 25</h3><p class="precio">$0</p><p class="descripcion">Olla duradera, perfecta para cocinas modernas y profesionales.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-025.png" alt="Olla 26"><h3>Olla 26</h3><p class="precio">$0</p><p class="descripcion">Olla versátil y resistente, ideal para uso diario en la cocina.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-026.png" alt="Olla 27"><h3>Olla 27</h3><p class="precio">$0</p><p class="descripcion">Diseño moderno, perfecta para todo tipo de recetas caseras.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-027.png" alt="Olla 28"><h3>Olla 28</h3><p class="precio">$0</p><p class="descripcion">Fabricada con materiales de alta calidad, duradera y elegante.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-028.png" alt="Olla 29"><h3>Olla 29</h3><p class="precio">$0</p><p class="descripcion">Ideal para cocinas modernas, mantiene el calor de forma uniforme.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-029.png" alt="Olla 30"><h3>Olla 30</h3><p class="precio">$0</p><p class="descripcion">Capacidad amplia, perfecta para preparar comidas familiares.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-030.png" alt="Olla 31"><h3>Olla 31</h3><p class="precio">$0</p><p class="descripcion">Olla resistente, ideal para todo tipo de cocción y recetas grandes.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-031.png" alt="Olla 32"><h3>Olla 32</h3><p class="precio">$0</p><p class="descripcion">Diseño profesional, duradera y fácil de limpiar.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-032.png" alt="Olla 33"><h3>Olla 33</h3><p class="precio">$0</p><p class="descripcion">Perfecta para uso diario, mantiene la temperatura constante.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-033.png" alt="Olla 34"><h3>Olla 34</h3><p class="precio">$0</p><p class="descripcion">Elegante y funcional, ideal para cocinas modernas y profesionales.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-034.png" alt="Olla 35"><h3>Olla 35</h3><p class="precio">$0</p><p class="descripcion">Capacidad amplia, resistente al uso diario y a altas temperaturas.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-035.png" alt="Olla 36"><h3>Olla 36</h3><p class="precio">$0</p><p class="descripcion">Olla versátil, perfecta para recetas grandes y cocina profesional.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-036.png" alt="Olla 37"><h3>Olla 37</h3><p class="precio">$0</p><p class="descripcion">Diseño robusto y elegante, mantiene el calor de forma uniforme.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-037.png" alt="Olla 38"><h3>Olla 38</h3><p class="precio">$0</p><p class="descripcion">Resistente y durable, ideal para todo tipo de cocción diaria.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-038.png" alt="Olla 39"><h3>Olla 39</h3><p class="precio">$0</p><p class="descripcion">Olla de gran capacidad, perfecta para familias numerosas.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-039.png" alt="Olla 40"><h3>Olla 40</h3><p class="precio">$0</p><p class="descripcion">Material de alta calidad, ideal para cocinar con eficiencia.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-040.png" alt="Olla 41"><h3>Olla 41</h3><p class="precio">$0</p><p class="descripcion">Diseño moderno y funcional, excelente distribución del calor.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-041.png" alt="Olla 42"><h3>Olla 42</h3><p class="precio">$0</p><p class="descripcion">Olla resistente, ideal para todo tipo de recetas diarias.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-042.png" alt="Olla 43"><h3>Olla 43</h3><p class="precio">$0</p><p class="descripcion">Capacidad amplia y diseño elegante, perfecta para familias.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-043.png" alt="Olla 44"><h3>Olla 44</h3><p class="precio">$0</p><p class="descripcion">Fabricada con materiales duraderos, mantiene la temperatura constante.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-044.png" alt="Olla 45"><h3>Olla 45</h3><p class="precio">$0</p><p class="descripcion">Olla profesional, perfecta para cocina casera o industrial.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-045.png" alt="Olla 46"><h3>Olla 46</h3><p class="precio">$0</p><p class="descripcion">Resistente y elegante, ideal para todo tipo de recetas.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-046.png" alt="Olla 47"><h3>Olla 47</h3><p class="precio">$0</p><p class="descripcion">Diseño moderno y funcional, excelente para uso diario.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-047.png" alt="Olla 48"><h3>Olla 48</h3><p class="precio">$0</p><p class="descripcion">Olla de gran capacidad, ideal para familias y eventos grandes.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-048.png" alt="Olla 49"><h3>Olla 49</h3><p class="precio">$0</p><p class="descripcion">Versátil, duradera y fácil de limpiar, perfecta para cocinas modernas.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-049.png" alt="Olla 50"><h3>Olla 50</h3><p class="precio">$0</p><p class="descripcion">Capacidad amplia y resistente, ideal para todo tipo de cocción.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-050.png" alt="Olla 51"><h3>Olla 51</h3><p class="precio">$0</p><p class="descripcion">Olla robusta y elegante, perfecta para cocina profesional.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-051.png" alt="Olla 52"><h3>Olla 52</h3><p class="precio">$0</p><p class="descripcion">Diseño moderno y resistente, ideal para recetas grandes y familiares.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-052.png" alt="Olla 53"><h3>Olla 53</h3><p class="precio">$0</p><p class="descripcion">Olla de aluminio reforzado, duradera y fácil de limpiar.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-053.png" alt="Olla 54"><h3>Olla 54</h3><p class="precio">$0</p><p class="descripcion">Perfecta para cocina diaria, mantiene el calor uniformemente.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<div class="producto"><img src="imgs/imagen-054.png" alt="Olla 55"><h3>Olla 55</h3><p class="precio">$0</p><p class="descripcion">Versátil, resistente y elegante, ideal para todo tipo de recetas.</p><button class="btn-carrito">Agregar al carrito</button></div>
