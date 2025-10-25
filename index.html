@@ -1,66 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pauliana | Tienda de Ollas Profesionales</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tita - Ollas de Calidad</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="logo">Pauliana</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Nosotros</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="productos.html">Catálogo</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Ollas Tita</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#sobre-tita">Sobre Tita</a>
+      <a href="#reseñas">Reseñas</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#" id="verCarrito">🛒 Carrito (<span id="contador">0</span>)</a>
+    </nav>
+  </header>
 
-    <main>
-        <section id="inicio" class="fade-in">
-            <h2>Inicio</h2>
-            <p>Bienvenido a <strong>Virguinia</strong>, tu tienda de <strong>ollas profesionales de aluminio reforzado</strong>. 
-            Diseñadas para chefs y amantes de la cocina que buscan durabilidad, calidad y elegancia.</p>
+  <section id="hero">
+    <h2>Bienvenido a Tita</h2>
+    <p>Ollas resistentes, modernas y hechas con amor argentino ❤️</p>
+    <a href="#productos" class="boton">Ver productos</a>
+  </section>
 
-            <div class="galeria">
-                <img src="imgs/imagen-000.png" alt="Olla profesional 1">
-                <img src="imgs/imagen-001.png" alt="Olla profesional 2">
-                <img src="imgs/imagen-002.png" alt="Olla profesional 3">
-                <img src="imgs/imagen-003.png" alt="Olla profesional 4">
-                <img src="imgs/imagen-004.png" alt="Olla profesional 5">
-                <img src="imgs/imagen-005.png" alt="Olla profesional 6">
-            </div>
+  <!-- Buscador -->
+  <section id="buscador">
+    <input type="text" id="buscar" placeholder="Buscar productos...">
+  </section>
 
-            <div class="boton-centro">
-                <a href="productos.html" class="btn">Ver más productos</a>
-            </div>
-        </section>
+  <!-- Productos -->
+  <section id="productos">
+    <h2>Nuestros productos</h2>
+    <div class="grid-productos">
 
-        <section id="sobre-mi" class="fade-in">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos una empresa dedicada a la fabricación y venta de ollas de aluminio reforzado. 
-            Nos enfocamos en ofrecer productos resistentes, seguros y de alto rendimiento para cocinas profesionales y domésticas.</p>
-        </section>
+      <div class="producto" data-nombre="olla acero inoxidable">
+        <img src="ollas/olla1.jpg" alt="Olla acero inoxidable">
+        <h3>Olla Acero Inoxidable 24cm</h3>
+        <p>Ideal para cocina diaria, resistente y duradera.</p>
+        <p class="precio">$12.500</p>
+        <button class="boton agregar">Agregar al carrito</button>
+      </div>
 
-        <section id="contacto" class="fade-in">
-            <h2>Contacto</h2>
-            <form id="contact-form">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu email" required>
-                <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+      <div class="producto" data-nombre="olla antiadherente premium">
+        <img src="ollas/olla2.jpg" alt="Olla antiadherente">
+        <h3>Olla Antiadherente Premium 28cm</h3>
+        <p>Superficie antiadherente y cocción uniforme.</p>
+        <p class="precio">$14.200</p>
+        <button class="boton agregar">Agregar al carrito</button>
+      </div>
 
-    <footer>
-        <p>&copy; 2025 Pauliana | Tienda de Ollas Profesionales</p>
-    </footer>
+      <div class="producto" data-nombre="cacerola tapa vidrio">
+        <img src="ollas/olla3.jpg" alt="Cacerola con tapa">
+        <h3>Cacerola con Tapa de Vidrio</h3>
+        <p>Tapa templada y asas ergonómicas, lista para todo.</p>
+        <p class="precio">$18.900</p>
+        <button class="boton agregar">Agregar al carrito</button>
+      </div>
 
-    <script src="scripts/main.js"></script>
+    </div>
+  </section>
+
+  <!-- Sobre Tita -->
+  <section id="sobre-tita">
+    <h2>Sobre Tita</h2>
+    <p>
+      En <strong>Tita</strong> fabricamos ollas con amor, diseño y durabilidad.
+      Nuestra misión es llenar de sabor las cocinas argentinas con productos confiables y de calidad.
+    </p>
+  </section>
+
+  <!-- Reseñas -->
+  <section id="reseñas">
+    <h2>Reseñas de Clientes</h2>
+    <div class="reseña">
+      <p>“Excelente calidad, las ollas no se pegan y son súper resistentes.”</p>
+      <span>- María G.</span>
+    </div>
+    <div class="reseña">
+      <p>“Llegó rapidísimo y bien embalado. Muy recomendables.”</p>
+      <span>- Pablo S.</span>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form id="form-contacto">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu correo" required>
+      <textarea id="mensaje" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="respuesta"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Ollas Tita — Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Modal Carrito -->
+  <div id="carrito-modal" class="oculto">
+    <div class="carrito-contenido">
+      <h3>Tu carrito</h3>
+      <ul id="listaCarrito"></ul>
+      <p><strong>Total:</strong> $<span id="total">0</span></p>
+      <button id="cerrarCarrito" class="boton">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

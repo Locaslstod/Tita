@@ -1,0 +1,130 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff4ec;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #ff5722;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { text-decoration: underline; }
+
+/* HERO */
+#hero {
+  background: linear-gradient(135deg, #ff8a50, #ffccbc);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+/* PRODUCTOS */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.producto {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+.producto:hover { transform: scale(1.05); }
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+.precio {
+  color: #ff5722;
+  font-weight: bold;
+}
+.boton {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.boton:hover { background: #e64a19; }
+
+/* BUSCADOR */
+#buscador {
+  text-align: center;
+  padding: 20px;
+}
+#buscar {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* SECCIONES */
+section {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 900px;
+  background: #fff8f2;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 {
+  color: #e64a19;
+  text-align: center;
+}
+
+/* FORMULARIO CONTACTO */
+#form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#form-contacto input,
+#form-contacto textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+#respuesta { color: #4caf50; text-align: center; margin-top: 10px; }
+
+/* FOOTER */
+footer {
+  background: #ff5722;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* MODAL CARRITO */
+#carrito-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carrito-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+}
+.oculto { display: none; }
