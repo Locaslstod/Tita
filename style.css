@@ -1,17 +1,33 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #fff4ec;
-  color: #333;
+:root {
+  --accent: #ff5722;
+  --accent-dark: #e64a19;
+  --bg: #fff4ec;
+  --card: #ffffff;
+  --muted: #666;
+  --wrap: 1100px;
+  --radius: 12px;
 }
 
-/* HEADER */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: #222;
+}
+
+/* Wrapper */
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+/* Header */
 header {
-  background: #ff5722;
-  color: white;
+  background: var(--accent);
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
+header h1 { margin: 0; font-size: 1.8rem; }
 nav a {
   color: white;
   margin: 0 10px;
@@ -20,111 +36,111 @@ nav a {
 }
 nav a:hover { text-decoration: underline; }
 
-/* HERO */
+/* Hero */
 #hero {
   background: linear-gradient(135deg, #ff8a50, #ffccbc);
   text-align: center;
   padding: 60px 20px;
   color: white;
 }
+#hero h2 { font-size: 2rem; margin-bottom: 10px; }
+#hero p { font-size: 1.1rem; margin-bottom: 20px; }
+#hero .boton {
+  background: #fff;
+  color: var(--accent);
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.3s;
+}
+#hero .boton:hover { background: #ffe6d6; }
 
-/* PRODUCTOS */
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-.producto {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-  padding: 15px;
-  transition: transform 0.3s;
-}
-.producto:hover { transform: scale(1.05); }
-.producto img {
-  width: 100%;
-  border-radius: 10px;
-}
-.precio {
-  color: #ff5722;
-  font-weight: bold;
-}
-.boton {
-  background: #ff5722;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.boton:hover { background: #e64a19; }
-
-/* BUSCADOR */
+/* Buscador */
 #buscador {
   text-align: center;
   padding: 20px;
 }
 #buscar {
-  padding: 10px;
+  padding: 12px;
   width: 80%;
   max-width: 400px;
   border-radius: 10px;
   border: 1px solid #ccc;
+  transition: all 0.3s;
 }
+#buscar:focus { border-color: var(--accent); outline: none; }
 
-/* SECCIONES */
-section {
-  margin: 40px auto;
+/* Productos */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   padding: 20px;
-  max-width: 900px;
-  background: #fff8f2;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-h2 {
-  color: #e64a19;
-  text-align: center;
-}
-
-/* FORMULARIO CONTACTO */
-#form-contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#form-contacto input,
-#form-contacto textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-#respuesta { color: #4caf50; text-align: center; margin-top: 10px; }
-
-/* FOOTER */
-footer {
-  background: #ff5722;
-  color: white;
-  text-align: center;
+.producto {
+  background: var(--card);
+  border-radius: var(--radius);
   padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+.producto:nth-child(1){animation-delay: 0.05s;}
+.producto:nth-child(2){animation-delay: 0.1s;}
+.producto:nth-child(3){animation-delay: 0.15s;}
+.producto:nth-child(4){animation-delay: 0.2s;}
+.producto:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.producto img:hover { transform: scale(1.05); }
+
+h3 { margin: 10px 0 6px; font-size: 1.1rem; }
+.precio {
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.boton {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.boton:hover { background: var(--accent-dark); }
+
+/* Secciones */
+section { margin: 40px auto; padding: 20px; max-width: 900px; }
+
+/* Sobre Tita, Reseñas, Contacto */
+#sobre-tita, #reseñas, #contacto {
+  background: #fff8f2;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
 }
 
-/* MODAL CARRITO */
-#carrito-modal {
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Footer */
+footer { background: var(--accent); color: white; text-align: center; padding: 15px; }
+
+/* Animación entrada */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-.carrito-contenido {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 400px;
+
+/* Responsive */
+@media (max-width:720px){
+  .grid-productos { grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); }
 }
-.oculto { display: none; }
