@@ -19,7 +19,7 @@ var Tita = Tita || {};
 Tita.store = {
   id: 1,
   name: "Tita Ollas",
-  url: "https://locaslstod.github.io/Tita/",
+  url: "https://locaslstod.github.io/Tita/productos.html",
   currency: {
     code: "ARS",
     symbol: "$",
