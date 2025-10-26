@@ -1,73 +1,81 @@
 <section id="contacto" class="contacto">
   <div class="container">
     <h2>Contacto</h2>
+    <div class="contact-grid">
+      <!-- Información -->
+      <div class="info-card">
+        <p>💬 ¿Tenés dudas o querés hacer un pedido?</p>
+        <p>Escribinos por WhatsApp o completá el formulario. ¡Queremos ayudarte!</p>
+        <p><strong>📞 Teléfono:</strong> +54 9 3751 445274</p>
+        <p><strong>📍 Ubicación:</strong> Argentina</p>
+        <p><strong>📧 Correo:</strong> contacto@virginia.com</p>
+        <div class="botones-contacto">
+          <a href="https://wa.me/5493751445274" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+          <a href="https://locaslstod.github.io/Tita/productos.html" class="btn-volver">⬅ Volver a productos</a>
+        </div>
+      </div>
 
-    <p class="mensaje">
-      💬 ¿Tenés dudas o querés hacer un pedido?  
-      Escribinos por <strong>WhatsApp</strong> o completá el formulario.  
-      ¡Queremos ayudarte a encontrar el producto ideal para tu cocina!
-    </p>
-
-    <div class="contacto-info">
-      <p><strong>📞 Teléfono:</strong> +54 9 3751 445274</p>
-      <p><strong>📍 Ubicación:</strong> Argentina</p>
-      <p><strong>📧 Correo:</strong> sl925954@gmail.com</p>
+      <!-- Formulario -->
+      <div class="form-card">
+        <form action="https://formspree.io/f/mqakbrgr" method="POST" class="contact-form">
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="email" name="email" placeholder="Tu correo electrónico" required>
+          <textarea name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+          <button type="submit">📨 Enviar mensaje</button>
+        </form>
+      </div>
     </div>
-
-    <div class="botones-contacto">
-      <a href="https://wa.me/5493751445274" target="_blank" class="btn-whatsapp">💬 Chatear por WhatsApp</a>
-      <a href="https://locaslstod.github.io/Tita/productos.html" class="btn-volver">⬅ Volver a productos</a>
-    </div>
-
-    <form action="https://formspree.io/f/mqakbrgr" method="POST" class="contact-form">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
-      <button type="submit">📨 Enviar mensaje</button>
-    </form>
   </div>
 
-  <!-- Botón flotante estilo inicio -->
+  <!-- Botón flotante de inicio -->
   <a href="https://locaslstod.github.io/Tita/productos.html" class="btn-flotante" title="Volver al inicio">🏠</a>
 
   <style>
     .contacto {
-      background: var(--main-background, #f9f7f5);
-      padding: 70px 20px;
-      text-align: center;
-      border-top: 2px solid #ddd;
+      background: var(--main-background, #f2f0ec);
+      padding: 80px 20px;
       font-family: var(--body-font, "Lato", sans-serif);
     }
 
     .contacto h2 {
       color: var(--accent-color, #c0392b);
       font-family: var(--heading-font, "Marcellus", serif);
-      font-size: 2.4em;
-      margin-bottom: 25px;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .contacto .mensaje {
-      font-size: 1.1em;
+    .contact-grid {
+      display: flex;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .info-card, .form-card {
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1 1 400px;
+    }
+
+    .info-card p {
+      margin: 10px 0;
+      line-height: 1.6;
       color: #333;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
-
-    .contacto-info p {
-      margin: 5px 0;
-      color: #555;
     }
 
     .botones-contacto {
+      margin-top: 20px;
       display: flex;
-      justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      justify-content: center;
     }
 
-    .btn-whatsapp,
-    .btn-volver {
+    .btn-whatsapp, .btn-volver {
       display: inline-block;
       padding: 12px 25px;
       border-radius: 8px;
@@ -92,11 +100,9 @@
     }
 
     .contact-form {
-      max-width: 500px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 15px;
     }
 
     .contact-form input,
@@ -106,7 +112,6 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1em;
-      font-family: "Lato", sans-serif;
       transition: border 0.3s;
     }
 
@@ -126,12 +131,10 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-
     .contact-form button:hover {
-      background: #a93226;
+      background: #922b21;
     }
 
-    /* Botón flotante de inicio */
     .btn-flotante {
       position: fixed;
       bottom: 20px;
@@ -156,10 +159,9 @@
       transform: scale(1.1);
     }
 
-    @media (max-width: 600px) {
-      .botones-contacto {
+    @media (max-width: 800px) {
+      .contact-grid {
         flex-direction: column;
-        gap: 15px;
       }
     }
   </style>
