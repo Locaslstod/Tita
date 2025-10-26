@@ -1,111 +1,71 @@
-<!-- 🩷 HEADER MODERNO PARA VIRGINIA -->
-<head>
-  <!-- Íconos de Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+<section id="quienes-somos" class="quienes-somos">
+  <div class="container">
+    <h2>Quiénes Somos</h2>
+    <p>
+      En <strong>Tita</strong> nos apasiona la cocina y creemos que los mejores momentos
+      se viven alrededor de una buena comida. Por eso ofrecemos
+      <strong>ollas, sartenes y utensilios de alta calidad</strong>,
+      diseñados para acompañarte todos los días, desde las recetas simples
+      hasta las más elaboradas.
+    </p>
 
-<header>
-  <!-- Barra superior con info -->
-  <div class="top-info">
-    <p>📞 +54 9 3751 44-5274 | 🕒 Lunes a Viernes 7:00–20:00hs | ✉️ ventas@virginia.com</p>
+    <p>
+      Somos una marca argentina que combina <strong>durabilidad, diseño y accesibilidad</strong>.
+      Cada producto ha sido cuidadosamente seleccionado para garantizar el mejor rendimiento
+      y estilo en tu cocina.
+    </p>
+
+    <p>
+      Nuestro compromiso es brindarte una <strong>atención cercana</strong> y un servicio confiable,
+      con envíos a todo el país y la posibilidad de contactarnos directamente por
+      <a href="https://wa.me/5493751445274" target="_blank">WhatsApp</a> para resolver tus dudas o pedidos.
+    </p>
+
+    <p class="firma">
+      <strong>💫 Tita – Calidad que se nota, todos los días.</strong>
+    </p>
   </div>
 
-  <!-- Logo y navegación -->
-  <div class="main-header">
-    <h1 class="logo">Virginia</h1>
+  <!-- ============================= -->
+  <!-- CSS interno para esta sección -->
+  <!-- ============================= -->
+  <style>
+    .quienes-somos {
+      background: #f9f7f5;
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 2px solid #ddd;
+    }
 
-    <nav>
-      <ul>
-        <li><a href="index.html#inicio">Inicio</a></li>
-        <li><a href="index.html#sobre-mi">Sobre Nosotros</a></li>
-        <li><a href="index.html#contacto">Contacto</a></li>
-        <li>
-          <a href="https://wa.me/549375144-5274" target="_blank" class="whatsapp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    .quienes-somos h2 {
+      color: #c17f59;
+      font-family: "Playfair Display", serif;
+      font-size: 2.2em;
+      margin-bottom: 25px;
+    }
 
-<!-- 🎨 Estilos -->
-<style>
-/* --- Barra superior --- */
-.top-info {
-  background-color: #ffe6f2;
-  color: #555;
-  font-size: 14px;
-  text-align: center;
-  padding: 6px 0;
-}
+    .quienes-somos p {
+      max-width: 800px;
+      margin: 12px auto;
+      color: #222222;
+      line-height: 1.7;
+      font-family: "Lato", sans-serif;
+      font-size: 15px;
+    }
 
-/* --- Header principal --- */
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    .quienes-somos a {
+      color: #c17f59;
+      text-decoration: none;
+    }
 
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-}
+    .quienes-somos a:hover {
+      text-decoration: underline;
+    }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #d63384;
-  letter-spacing: 1px;
-}
-
-/* --- Menú --- */
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #d63384;
-}
-
-/* --- WhatsApp --- */
-.whatsapp i {
-  font-size: 24px;
-  color: #25D366;
-  transition: transform 0.3s ease;
-}
-
-.whatsapp i:hover {
-  transform: scale(1.2);
-}
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-}
-</style>
+    .quienes-somos .firma {
+      margin-top: 25px;
+      font-weight: bold;
+      color: #222222;
+    }
+  </style>
+</section>
