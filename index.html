@@ -1,12 +1,12 @@
-<section id="quienes-somos" class="quienes-somos">
+<section id="sobre-mi" class="sobre-mi">
   <div class="container">
-    <h2>Quiénes Somos</h2>
+    <h2>Sobre Tita</h2>
+
     <p>
       En <strong>Tita</strong> nos apasiona la cocina y creemos que los mejores momentos
       se viven alrededor de una buena comida. Por eso ofrecemos
       <strong>ollas, sartenes y utensilios de alta calidad</strong>,
-      diseñados para acompañarte todos los días, desde las recetas simples
-      hasta las más elaboradas.
+      diseñados para acompañarte todos los días, desde recetas simples hasta las más elaboradas.
     </p>
 
     <p>
@@ -18,54 +18,77 @@
     <p>
       Nuestro compromiso es brindarte una <strong>atención cercana</strong> y un servicio confiable,
       con envíos a todo el país y la posibilidad de contactarnos directamente por
-      <a href="https://wa.me/5493751445274" target="_blank">WhatsApp</a> para resolver tus dudas o pedidos.
+      <a href="https://wa.me/549XXXXXXXXXX" target="_blank">WhatsApp</a>.
     </p>
 
-    <p class="firma">
-      <strong>💫 Tita – Calidad que se nota, todos los días.</strong>
-    </p>
+    <div class="botones">
+      <a href="#productos" class="btn-volver">⬆ Volver al inicio</a>
+      <a href="https://wa.me/549XXXXXXXXXX" class="btn-whatsapp" target="_blank">💬 Contactar WhatsApp</a>
+    </div>
   </div>
 
-  <!-- ============================= -->
-  <!-- CSS interno para esta sección -->
-  <!-- ============================= -->
   <style>
-    .quienes-somos {
-      background: #f9f7f5;
+    .sobre-mi {
+      background: var(--main-background, #f9f7f5);
       padding: 60px 20px;
       text-align: center;
       border-top: 2px solid #ddd;
     }
 
-    .quienes-somos h2 {
-      color: #c17f59;
-      font-family: "Playfair Display", serif;
-      font-size: 2.2em;
+    .sobre-mi h2 {
+      color: var(--accent-color, #c0392b);
+      font-family: var(--heading-font, "Marcellus", serif);
+      font-size: 2.4em;
       margin-bottom: 25px;
     }
 
-    .quienes-somos p {
+    .sobre-mi p {
       max-width: 800px;
       margin: 12px auto;
-      color: #222222;
+      color: var(--main-foreground, #222);
       line-height: 1.7;
-      font-family: "Lato", sans-serif;
-      font-size: 15px;
+      font-family: var(--body-font, "Lato", sans-serif);
+      font-size: var(--font-base, 15px);
     }
 
-    .quienes-somos a {
-      color: #c17f59;
+    .sobre-mi a {
+      color: var(--accent-color, #c0392b);
       text-decoration: none;
     }
 
-    .quienes-somos a:hover {
+    .sobre-mi a:hover {
       text-decoration: underline;
     }
 
-    .quienes-somos .firma {
-      margin-top: 25px;
-      font-weight: bold;
-      color: #222222;
+    .sobre-mi .botones {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sobre-mi .btn-volver,
+    .sobre-mi .btn-whatsapp {
+      background: var(--accent-color, #c0392b);
+      color: var(--button-foreground, #fff);
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .sobre-mi .btn-volver:hover,
+    .sobre-mi .btn-whatsapp:hover {
+      background: #922b21; /* versión más oscura al pasar el mouse */
+    }
+
+    @media (max-width: 600px) {
+      .sobre-mi .botones {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
   </style>
 </section>
