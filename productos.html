@@ -28,6 +28,9 @@
     .btn-carrito { background:#0275d8; color:white; border:none; padding:10px 20px; margin-bottom:15px; border-radius:5px; cursor:pointer; transition:0.2s; }
     .btn-carrito:hover { background:#025aa5; }
     footer { text-align:center; padding:20px; background:#333; color:white; }
+
+
+
     :root {
   /* Colores principales */
   --main-foreground: #222222;
@@ -80,7 +83,115 @@
   </style>
 </head>
 <body>
+<!-- ============================= -->
+<!-- ENCABEZADO PRINCIPAL -->
+<!-- ============================= -->
 
+<header>
+  <h1 class="logo">Virginia</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html#inicio" class="inicio-link">Inicio</a></li>
+      <li><a href="index.html#sobre-mi" class="sobre-link">Sobre Nosotros</a></li>
+      <li><a href="index.html#contacto" class="contacto-link">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <style>
+    /* Importar fuentes */
+    @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@400;700&family=Poppins:wght@500&family=Playfair+Display:wght@600&display=swap');
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--header-background, #ffffff);
+      padding: 15px 40px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      font-weight: 600;
+      color: var(--accent-color, #c0392b);
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, transform 0.2s;
+      position: relative;
+    }
+
+    /* Fuentes y colores distintas por enlace */
+    .inicio-link {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    .sobre-link {
+      font-family: 'Marcellus', serif;
+      color: #b03a2e;
+    }
+
+    .contacto-link {
+      font-family: 'Lato', sans-serif;
+      color: #444;
+    }
+
+    /* Efecto hover con subrayado animado */
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background: var(--accent-color, #c0392b);
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: var(--accent-color, #c0392b);
+      transform: translateY(-2px);
+    }
+
+    /* Adaptación móvil */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</header>
 <header>
   <h1 class="logo">Virginia</h1>
   <nav>
@@ -111,7 +222,8 @@
 
     <!-- Bloques de productos del 1 al 55 -->
 
-<!-- BLOQUES DE PRODUCTOS 1 A 25 --><div class="producto"><img src="imgs/imagen-000.png" alt="Olla 1"><h3>Olla 20</h3><p class="precio">$2400</p><p class="descripcion">Olla profesional de aluminio reforzado, ideal para cocina diaria.</p><button class="btn-carrito">Agregar al carrito</button></div>
+<!-- BLOQUES DE PRODUCTOS 1 A 25 -->
+<div class="producto"><img src="imgs/imagen-000.png" alt="Olla 1"><h3>Olla 20</h3><p class="precio">$2400</p><p class="descripcion">Olla profesional de aluminio reforzado, ideal para cocina diaria.</p><button class="btn-carrito">Agregar al carrito</button></div>
 <div class="producto"><img src="imgs/imagen-001.png" alt="Olla 2"><h3>Olla 20</h3><p class="precio">$23000</p><p class="descripcion">Olla resistente y elegante, perfecta para todo tipo de preparación.</p><button class="btn-carrito">Agregar al carrito</button></div>
 <div class="producto"><img src="imgs/imagen-002.png" alt="Olla 3"><h3>Olla 20</h3><p class="precio">$23000</p><p class="descripcion">Diseño moderno y duradero, excelente distribución del calor.</p><button class="btn-carrito">Agregar al carrito</button></div>
 <div class="producto"><img src="imgs/imagen-003.png" alt="Olla 4"><h3>Olla 22</h3><p class="precio">$24000</p><p class="descripcion">Ideal para cocinar con eficiencia y estilo, aluminio de alta calidad.</p><button class="btn-carrito">Agregar al carrito</button></div>
